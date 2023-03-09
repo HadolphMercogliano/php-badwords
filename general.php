@@ -25,17 +25,19 @@ $censored_paragraph = str_replace("ipsum","***",$init_paragraph );
   </head>
 
   <body>
-    <h3>Questo è il tuo paragrafo</h3>
-    <p>
-      <?php echo $init_paragraph;?>    
-    </p>
-    <h4>Il tuo paragrafo è lungo <?php echo strlen($init_paragraph); ?> caratteri</h4>
-
-    <h3>Questo è il tuo paragrafo censurato</h3>
-    <p>
-      <?php echo $censored_paragraph;?>
-    </p>
-      <h4>Il tuo paragrafo censurato è lungo <?php echo strlen($censored_paragraph); ?> caratteri</h4>
+    <div class="container">
+      <h2 class="text-danger">Questo è il tuo paragrafo</h2>
+      <p>
+        <?php echo $init_paragraph;?>    
+      </p>
+      <p>Il tuo paragrafo è lungo <b><?php echo strlen($init_paragraph); ?></b> caratteri</p>
+  
+      <h3 class="text-danger">Questo è il tuo paragrafo censurato</h3>
+      <p>
+        <?php echo $censored_paragraph;?>
+      </p>
+        <p>Il tuo paragrafo censurato è lungo <b><?php echo strlen($censored_paragraph); ?></b> caratteri</p>
+    </div>
 
   </body>
   </html>
