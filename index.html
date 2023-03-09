@@ -32,17 +32,25 @@
   </head>
 
   <body>
-    <form action="GET">
-      <label for="paragraph">Scrivi un paragrafo da controllare</label>
-      <textarea
-        name="paragraph"
-        id="paragraph"
-        cols="30"
-        rows="10"></textarea>
-      <button
-        type="submit"
-        class="btn btn-primary">
-        Invia
-      </button>
-    </form>
+    <div class="container pt-5">
+      <h1 class="">Censuratore di badwords</h1>
+      <form
+        method="POST"
+        action="./general.php"
+        class="d-flex flex-column align-items-start m-5">
+        <label for="paragraph">Scrivi un paragrafo da controllare</label>
+        <textarea
+          class="my-2"
+          name="paragraph"
+          id="paragraph"
+          value="">
+        </textarea>
+        <button
+          type="submit"
+          class="btn btn-primary">
+          Invia
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
