@@ -1,6 +1,7 @@
 <?php 
 $init_paragraph = $_POST["paragraph"];
-$censored_paragraph = str_replace("ipsum","***",$init_paragraph );
+$badword = $_POST["badword"];
+$censored_paragraph = str_replace($badword, "***" ,$init_paragraph );
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +37,7 @@ $censored_paragraph = str_replace("ipsum","***",$init_paragraph );
       <p>
         <?php echo $censored_paragraph;?>
       </p>
-        <p>Il tuo paragrafo censurato è lungo <b><?php echo strlen($censored_paragraph); ?></b> caratteri</p>
+        <p>Il tuo paragrafo censurato è lungo <b><?php echo strlen($censored_paragraph); ?></b> caratteri </p>
     </div>
 
   </body>
